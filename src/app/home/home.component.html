@@ -1,0 +1,22 @@
+<html>
+<div class="frame">
+  <ul *ngFor="let item of blogList | paginate: { itemsPerPage: 3, currentPage: cp }" class="listMargin">
+   <div class="left">
+        <img src="https://varian.widen.net/content/{{item.widen_image_id}}/jpeg?w=130&h=130&crop=true" alt="{{item.widen_image_id}}">
+   </div >
+    <div class="right">
+        <h2>{{item.title}}</h2>
+        <h3>{{item.date_release}}</h3>
+        <p>{{item.node_alias}}</p>
+    </div>
+  </ul>
+</div>
+
+<div align="center">
+    <pagination-controls (pageChange)="cp = $event"></pagination-controls>
+   <mat-button-toggle-group name="fontStyle" aria-label="Font Style"  (change)="onToggleLang($event)" [value]="selectedLang">
+  <mat-button-toggle [value]="toggleEnum.en">English</mat-button-toggle>
+  <mat-button-toggle [value]="toggleEnum.fin">Finland English</mat-button-toggle>
+</mat-button-toggle-group>
+</div> <br>
+</html>
