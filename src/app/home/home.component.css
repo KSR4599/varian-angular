@@ -15,7 +15,7 @@
   padding-right: 50px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .left {
     float: none;
     max-width: 100;
