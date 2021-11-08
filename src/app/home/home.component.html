@@ -1,15 +1,23 @@
 <html>
 <div class="frame">
-  <ul *ngFor="let item of blogList | paginate: { itemsPerPage: 3, currentPage: cp }" class="listMargin">
-   <div class="left">
-        <img src="https://varian.widen.net/content/{{item.widen_image_id}}/jpeg?w=130&h=130&crop=true" alt="{{item.widen_image_id}}">
+  <ul *ngFor="let item of blogList | paginate: { itemsPerPage: 3, currentPage: cp }">
+    <div class ="parent">
+
+   <div class="child">
+        <img src="https://varian.widen.net/content/{{item.widen_image_id}}/jpeg?w=300&h=300&crop=true" alt="{{item.widen_image_id}}">
    </div >
-    <div class="right">
+
+   
+    <div class="child">
         <h2>{{item.title}}</h2>
         <h3>{{item.date_release}}</h3>
         <p>{{item.node_alias}}</p>
     </div>
+
+    
+      </div>
   </ul>
+
 </div>
 
 <div align="center">

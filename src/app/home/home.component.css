@@ -1,23 +1,24 @@
 .frame {
   width: 80%;
-  padding: 5px;
-  overflow: hidden;
-}
-
-.right {
   overflow: hidden;
   
 }
 
-.left {
-  float: left;
-  max-width: 400px;
-  padding-right: 50px;
+.parent {
+  display: flex;
 }
 
-@media screen and (max-width: 639px) {
-  .left {
-    float: none;
-    max-width: 100;
+.child {
+  padding-right:5%;
+}
+
+@media (max-width: 639px) {
+  .parent {
+    flex-direction: column
   }
+}
+
+h3{
+  color:grey;
+  font-weight: bold;
 }
